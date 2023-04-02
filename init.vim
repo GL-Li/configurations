@@ -1,3 +1,4 @@
+
 " Configuration file for Vi Improved, save as ~/.vimrc to use.
 " Written on 2014-07-16 by Miko Bartnicki <mikobartnicki@gmail.com>.
 
@@ -10,7 +11,6 @@ set ruler " show the cursor position all the time
 set noshowmatch " not highlight matching braces
 set showmode " show insert/replace/visual mode
 set number relativenumber " show line numbers and relativenumber
-set wildmenu  " show
 
 " write settings
 set confirm " confirm :q in case of unsaved changes
@@ -36,8 +36,10 @@ filetype on " enable file type detection
 filetype plugin on " load the plugins for specific file types
 filetype indent on " automatically indent code
 
+" using solarized colorscheme
+" let g:solarized_termcolors=256
 " syntax highlighting
-colorscheme slate " set color scheme, must be installed first
+colorscheme solarized " set color scheme, must be installed first
 set background=dark " dark background for console
 syntax enable " enable syntax highlighting
 
