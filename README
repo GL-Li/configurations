@@ -1,5 +1,6 @@
 Files in this directory:
 
-    - `.vimrc`
-    - `.bashrc`
-    - init.vim
+- `.vimrc`
+- `.bashrc`
+- init.vim
+- markdown.vim, should be placed in `~/.vim/after/syntax/`

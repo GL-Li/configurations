@@ -1,0 +1,31 @@
+[legacy]
+theme-variant='dark'
+
+[legacy/profiles:]
+default='87bba6e1-97d5-4c41-bf88-adb1570fe0d2'
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', '87bba6e1-97d5-4c41-bf88-adb1570fe0d2']
+
+[legacy/profiles:/:87bba6e1-97d5-4c41-bf88-adb1570fe0d2]
+background-color='rgb(23,20,33)'
+bold-is-bright=false
+default-size-columns=90
+default-size-rows=30
+font='Ubuntu Mono 11'
+foreground-color='rgb(208,207,204)'
+palette=['rgb(39,34,55)', 'rgb(167,107,112)', 'rgb(38,162,105)', 'rgb(162,115,76)', 'rgb(54,117,196)', 'rgb(163,71,186)', 'rgb(136,150,152)', 'rgb(208,207,204)', 'rgb(2,3,98)', 'rgb(151,82,74)', 'rgb(75,77,76)', 'rgb(67,65,60)', 'rgb(168,182,198)', 'rgb(192,97,203)', 'rgb(17,91,103)', 'rgb(255,255,255)']
+use-system-font=false
+use-theme-colors=true
+use-theme-transparency=true
+visible-name='solarized_custom'
+
+[legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+background-color='rgb(23,20,33)'
+bold-is-bright=false
+default-size-columns=90
+default-size-rows=30
+font='Ubuntu Mono 11'
+foreground-color='rgb(208,207,204)'
+palette=['rgb(23,20,33)', 'rgb(167,107,112)', 'rgb(38,162,105)', 'rgb(162,115,76)', 'rgb(54,117,196)', 'rgb(163,71,186)', 'rgb(136,150,152)', 'rgb(208,207,204)', 'rgb(2,3,98)', 'rgb(151,82,74)', 'rgb(75,77,76)', 'rgb(67,65,60)', 'rgb(168,182,198)', 'rgb(192,97,203)', 'rgb(51,199,222)', 'rgb(255,255,255)']
+use-system-font=false
+use-theme-colors=true
+use-theme-transparency=true
