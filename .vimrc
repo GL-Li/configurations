@@ -1,3 +1,19 @@
+" install plugins
+"
+call plug#begin()
+
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+
+call plug#end()
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+call deoplete#custom#option('omni_patterns', {
+                        \ 'r': '[^. *\t]\.w*',
+                        \})
+
 " Configuration file for Vi Improved, save as ~/.vimrc to use.
 " Written on 2014-07-16 by Miko Bartnicki <mikobartnicki@gmail.com>.
 
@@ -101,15 +117,6 @@ inoremap <F8> <Esc>:nohl<CR>a
 " press F12 to toggle showing the non-printable charactes
 noremap <F12> :set list!<CR>
 inoremap <F12> <Esc>:set list!<CR>a
-
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option('omni_patterns', {
-                        \ 'r': '[^. *\t]\.w*',
-                        \})
-
-" turn off Nvim-R underscore to <-
-let R_assign = 0
 
 " softwrap text
 set linebreak
