@@ -16,6 +16,10 @@ Plug 'jalvesaq/Nvim-R'
 Plug 'preservim/nerdtree'
 Plug 'altercation/vim-colors-solarized'
 
+" fuzzy matching file names
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 " Use deoplete.
@@ -112,25 +116,15 @@ endif
 
 " general key mappings
 
-" center view on the search result
-noremap n nzz
-noremap N Nzz
-
-" press F4 to fix indentation in whole file; overwrites marker 'q' position
-noremap <F4> mqggVG=`qzz
-inoremap <F4> <Esc>mqggVG=`qzza
-
-" press F5 to sort selection or paragraph
-vnoremap <F5> :sort i<CR>
-nnoremap <F5> Vip:sort i<CR>
-
 " press F8 to turn the search results highlight off
 noremap <F8> :nohl<CR>
 inoremap <F8> <Esc>:nohl<CR>a
 
-" press F12 to toggle showing the non-printable charactes
-noremap <F12> :set list!<CR>
-inoremap <F12> <Esc>:set list!<CR>a
+" start fzf file search
+nmap <C-p> :Files<CR>
+
+" NERDTreeToggle
+nmap <C-n> :NERDTreeToggle<CR>
 
 " softwrap text
 set linebreak
