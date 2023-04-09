@@ -1,3 +1,5 @@
+" plugins and their settings
+" ==============================================================================
 
 " install plugins at ~/.config/nvim/plugged
 
@@ -31,6 +33,9 @@ call deoplete#custom#option('omni_patterns', {
 " turn off Nvim-R underscore to <-
 let R_assign = 0
 
+" general settings
+" ==============================================================================
+"
 " Configuration file for Vi Improved, save as ~/.vimrc to use.
 " Written on 2014-07-16 by Miko Bartnicki <mikobartnicki@gmail.com>.
 
@@ -114,7 +119,20 @@ if has('autocmd')
         autocmd BufWritePre * :%s/\s\+$//ge
 endif
 
+" softwrap text
+set linebreak
+set formatoptions=ro
+set comments=b:-
+set breakindent
+set autoindent
+set breakindentopt=shift:2
+
+" show vertical line at 81 and 121 characters
+set colorcolumn=81 ",121
+highlight ColorColumn ctermbg=0
+
 " general key mappings
+" ==============================================================================
 
 " press F8 to turn the search results highlight off
 noremap <F8> :nohl<CR>
@@ -131,11 +149,3 @@ nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
-
-" softwrap text
-set linebreak
-set formatoptions=ro
-set comments=b:-
-set breakindent
-set autoindent
-set breakindentopt=shift:2
