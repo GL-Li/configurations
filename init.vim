@@ -126,6 +126,12 @@ nmap <C-p> :Files<CR>
 " NERDTreeToggle
 nmap <C-n> :NERDTreeToggle<CR>
 
+" switch between windows
+nnoremap <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+
 " softwrap text
 set linebreak
 set formatoptions=ro
