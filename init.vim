@@ -22,6 +22,9 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+" maximize current window
+Plug 'szw/vim-maximizer'
+
 call plug#end()
 
 " Use deoplete.
@@ -149,3 +152,6 @@ nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
+
+" maximize current window
+nnoremap <C-m> :MaximizerToggle!<CR>
