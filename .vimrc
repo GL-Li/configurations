@@ -6,6 +6,17 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 
+" other plugins
+Plug 'preservim/nerdtree'
+Plug 'altercation/vim-colors-solarized'
+
+" fuzzy matching file names
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+" maximize current window
+Plug 'szw/vim-maximizer'
+
 call plug#end()
 
 " Use deoplete.
@@ -96,28 +107,6 @@ if has('autocmd')
         autocmd BufWritePre * :%s/\s\+$//ge
 endif
 
-" general key mappings
-
-" center view on the search result
-noremap n nzz
-noremap N Nzz
-
-" press F4 to fix indentation in whole file; overwrites marker 'q' position
-noremap <F4> mqggVG=`qzz
-inoremap <F4> <Esc>mqggVG=`qzza
-
-" press F5 to sort selection or paragraph
-vnoremap <F5> :sort i<CR>
-nnoremap <F5> Vip:sort i<CR>
-
-" press F8 to turn the search results highlight off
-noremap <F8> :nohl<CR>
-inoremap <F8> <Esc>:nohl<CR>a
-
-" press F12 to toggle showing the non-printable charactes
-noremap <F12> :set list!<CR>
-inoremap <F12> <Esc>:set list!<CR>a
-
 " softwrap text
 set linebreak
 set formatoptions=ro
@@ -125,3 +114,26 @@ set comments=b:-
 set breakindent
 set autoindent
 set breakindentopt=shift:2
+"
+"
+" general key mappings
+" ==============================================================================
+
+" press F8 to turn the search results highlight off
+noremap <F8> :nohl<CR>
+inoremap <F8> <Esc>:nohl<CR>a
+
+" start fzf file search
+nmap <C-p> :Files<CR>
+
+" NERDTreeToggle
+nmap <C-n> :NERDTreeToggle<CR>
+
+" switch between windows
+nnoremap <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+
+" maximize current window
+nnoremap <C-m> :MaximizerToggle!<CR>

@@ -22,8 +22,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" maximize current window
-Plug 'szw/vim-maximizer'
+" for Jupyter notebook
+Plug 'dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }
 
 call plug#end()
 
@@ -51,6 +51,8 @@ set ruler " show the cursor position all the time
 set noshowmatch " not highlight matching braces
 set showmode " show insert/replace/visual mode
 set number relativenumber " show line numbers and relativenumber
+set noswapfile
+set scrolloff=5  " keep 5 line above or below cursor when scroll
 
 " write settings
 set confirm " confirm :q in case of unsaved changes
@@ -64,6 +66,7 @@ set nojoinspaces " no extra space after '.' when joining lines
 set shiftwidth=4 " set indentation depth to 8 columns
 set softtabstop=4 " backspacing over 8 spaces like over tabs
 set tabstop=4 " set tabulator length to 8 columns
+set fileformat=unix
 
 " search settings
 set hlsearch " highlight search results
@@ -153,5 +156,13 @@ nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 
-" maximize current window
-nnoremap <C-m> :MaximizerToggle!<CR>
+"key biniding and setting for magma-nvim, interactively run python code
+nnoremap <silent><expr> <LocalLeader>p  :MagmaEvaluateOperator<CR>
+nnoremap <silent>       <LocalLeader>pm :MagmaEvaluateLine<CR>
+xnoremap <silent>       <LocalLeader>p  :<C-u>MagmaEvaluateVisual<CR>
+nnoremap <silent>       <LocalLeader>pc :MagmaReevaluateCell<CR>
+nnoremap <silent>       <LocalLeader>pd :MagmaDelete<CR>
+nnoremap <silent>       <LocalLeader>po :MagmaShowOutput<CR>
+
+let g:magma_automatically_open_output = v:false
+let g:magma_image_provider = "ueberzug"
