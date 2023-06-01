@@ -17,6 +17,8 @@ Plug 'junegunn/fzf.vim'
 " maximize current window
 Plug 'szw/vim-maximizer'
 
+Plug 'vimwiki/vimwiki'
+
 call plug#end()
 
 " Use deoplete.
@@ -24,6 +26,11 @@ let g:deoplete#enable_at_startup = 1
 call deoplete#custom#option('omni_patterns', {
                         \ 'r': '[^. *\t]\.w*',
                         \})
+"
+" vimwiki markdown syntex
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_global_ext = 0
 
 " Configuration file for Vi Improved, save as ~/.vimrc to use.
 " Written on 2014-07-16 by Miko Bartnicki <mikobartnicki@gmail.com>.
@@ -66,7 +73,7 @@ filetype indent on " automatically indent code
 " syntax highlighting
 colorscheme slate " set color scheme, must be installed first
 set background=dark " dark background for console
-syntax enable " enable syntax highlighting
+syntax on " enable syntax highlighting
 
 " characters for displaying non-printable characters
 set listchars=eol:$,tab:>-,trail:.,nbsp:_,extends:+,precedes:+
@@ -137,3 +144,9 @@ nnoremap <C-L> <C-W>l
 
 " maximize current window
 nnoremap <C-m> :MaximizerToggle!<CR>
+
+" vimwiki
+nnoremap <leader>wl :VimwikiVSplitLink<CR>
+
+" general
+nnoremap <leader>q :q<CR>

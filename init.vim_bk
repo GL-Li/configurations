@@ -25,6 +25,9 @@ Plug 'junegunn/fzf.vim'
 " for Jupyter notebook
 Plug 'dccsillag/magma-nvim', { 'do': ':UpdateRemotePlugins' }
 
+" Julia support
+Plug 'JuliaEditorSupport/julia-vim'
+
 call plug#end()
 
 " Use deoplete.
