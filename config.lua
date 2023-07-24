@@ -29,3 +29,6 @@ lvim.plugins = {
 -- enable clipboard to copy and paste in different lvim sessions
 -- need $ sudo apt install xclip to install a third party clipboard
 lvim.builtin.terminal.clipboard = true
+
+-- key mapping
+lvim.keys.normal_mode["<C-x>"] = ":RustRun<CR>"
