@@ -26,9 +26,32 @@ lvim.plugins = {
   }
 }
 
+-- default settings
+-- lvim.leader = "space"   -- leader key
+
+-- auto format on save
+lvim.format_on_save = true
+
 -- enable clipboard to copy and paste in different lvim sessions
 -- need $ sudo apt install xclip to install a third party clipboard
 lvim.builtin.terminal.clipboard = true
 
--- key mapping
+-- soft wrap text
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.breakindent = true
+vim.opt.autoindent = true
+vim.opt.breakindentopt = "shift:2"
+
+
+-- general key mappings
+lvim.builtin.terminal.open_mapping = "<c-t>" -- from https://www.lunarvim.org/docs/configuration/keybindings
+
+-- language specific settings =================================================
+
+-- R: turn off Nvim-R underscore to <- conversion
+vim.g.R_assign = 0
+
+-- Rust: key mapping
 lvim.keys.normal_mode["<C-x>"] = ":RustRun<CR>"
+
