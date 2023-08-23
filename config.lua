@@ -52,6 +52,9 @@ lvim.builtin.terminal.open_mapping = "<c-t>" -- from https://www.lunarvim.org/do
 -- R: turn off Nvim-R underscore to <- conversion
 vim.g.R_assign = 0
 
+-- R: start R language server if not automatically
+require'lspconfig'.r_language_server.setup{}  -- need to install.packages("languageserver") in R
+
 -- Rust: key mapping
 lvim.keys.normal_mode["<C-x>"] = ":RustRun<CR>"
 
