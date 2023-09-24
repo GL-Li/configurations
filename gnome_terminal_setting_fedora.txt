@@ -1,0 +1,12 @@
+[legacy]
+always-check-default-terminal=true
+new-tab-position='next'
+
+[legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+audible-bell=false
+background-color='rgb(38,39,39)'
+foreground-color='rgb(211,215,207)'
+palette=['rgb(23,20,33)', 'rgb(241,83,94)', 'rgb(38,162,105)', 'rgb(162,115,76)', 'rgb(31,114,217)', 'rgb(163,71,186)', 'rgb(42,161,179)', 'rgb(208,207,204)', 'rgb(94,92,100)', 'rgb(238,124,112)', 'rgb(51,218,122)', 'rgb(233,173,12)', 'rgb(58,141,242)', 'rgb(192,97,203)', 'rgb(51,199,222)', 'rgb(255,255,255)']
+preserve-working-directory='always'
+use-theme-colors=false
+visible-name='tango-dark-based'
