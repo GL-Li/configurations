@@ -12,7 +12,7 @@ use-theme-transparency=true
 
 [legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
 audible-bell=true
-background-color='rgb(3,25,38)'
+background-color='rgb(8,35,62)'
 bold-is-bright=false
 default-size-columns=92
 default-size-rows=22
