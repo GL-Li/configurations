@@ -12,6 +12,7 @@
 lvim.plugins = {
     {"alaviss/nim.nvim"},
     {"jalvesaq/Nvim-R"},
+    {"mhartington/oceanic-next"},  -- ocean blue color scheme
 
   -- chatGPT
   {
