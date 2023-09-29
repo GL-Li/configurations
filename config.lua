@@ -49,6 +49,9 @@ vim.opt.breakindent = true
 vim.opt.autoindent = true
 vim.opt.breakindentopt = "shift:2"
 
+-- default color scheme
+lvim.colorscheme = "OceanicNext"
+
 
 -- general key mappings
 lvim.builtin.terminal.open_mapping = "<c-t>" -- from https://www.lunarvim.org/docs/configuration/keybindings
