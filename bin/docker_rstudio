@@ -17,7 +17,7 @@ if [[ $# -eq 0 ]] ; then
         -d \
         --rm \
         -e DISABLE_AUTH="true" \
-        -v "$(pwd)":/home/rstudio/project \
+        -v "$(pwd)":/home/rstudio/ \
         -v $HOME/.gitconfig:/etc/gitconfig \
         -v $HOME/.ssh:/home/rstudio/.ssh \
         --network host \
@@ -30,7 +30,7 @@ else
         -d \
         --rm \
         -e DISABLE_AUTH="true" \
-        -v "$(pwd)":/home/rstudio/project \
+        -v "$(pwd)":/home/rstudio/ \
         -v $HOME/.gitconfig:/etc/gitconfig \
         -v $HOME/.ssh:/home/rstudio/.ssh \
         -p "$1":8787 \
