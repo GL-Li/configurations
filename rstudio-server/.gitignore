@@ -1,0 +1,9 @@
+/.quarto/
+/.local/
+/.config/
+/.cache/
+/_book/
+/.ssh/
+.lesshst
+.bash_history
+.sh_history
