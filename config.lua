@@ -10,13 +10,13 @@
 
 -- R plugins
 lvim.plugins = {
-    {"alaviss/nim.nvim"},
-    {"jalvesaq/Nvim-R"},
-    {"mhartington/oceanic-next"},  -- ocean blue color scheme
+  { "alaviss/nim.nvim" },
+  { "jalvesaq/Nvim-R" },
+  { "mhartington/oceanic-next" }, -- ocean blue color scheme
 
   -- chatGPT
   {
-  "jackMort/ChatGPT.nvim",
+    "jackMort/ChatGPT.nvim",
     event = "VeryLazy",
     config = function()
       require("chatgpt").setup({
@@ -49,6 +49,12 @@ vim.opt.breakindent = true
 vim.opt.autoindent = true
 vim.opt.breakindentopt = "shift:2"
 
+-- speed up leader key reaction time, May not be able to finish key binding if too short
+vim.opt.timeoutlen = 250
+
+-- line numer
+vim.opt.relativenumber = true
+
 -- default color scheme
 lvim.colorscheme = "OceanicNext"
 
@@ -62,8 +68,7 @@ lvim.builtin.terminal.open_mapping = "<c-t>" -- from https://www.lunarvim.org/do
 vim.g.R_assign = 0
 
 -- R: start R language server if not automatically
-require'lspconfig'.r_language_server.setup{}  -- need to install.packages("languageserver") in R
+require 'lspconfig'.r_language_server.setup {} -- need to install.packages("languageserver") in R
 
 -- Rust: key mapping
 lvim.keys.normal_mode["<C-x>"] = ":RustRun<CR>"
-
