@@ -22,7 +22,7 @@ if [[ $# -eq 0 ]] ; then
         -v $HOME/.ssh:/home/rstudio/.ssh \
         -v /mnt/e/census_data:/home/rstudio/.data \
         --network host \
-        --name rstudio \
+        --name census \
         lglforfun/rstudio_dev
 # if a port is given, publish the container to the
 # port and give a unique container name by port
@@ -36,6 +36,6 @@ else
         -v $HOME/.ssh:/home/rstudio/.ssh \
         -v /mnt/e/census_data:/home/rstudio/.data \
         -p "$1":8787 \
-        --name rstudio-"$1" \
+        --name census-"$1" \
         lglforfun/rstudio_dev
 fi
