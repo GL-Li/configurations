@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+# copy this file to ~/bin/ and make sure to it is an executable file
+
+# purpose of three volume mounts
+        # mount project to rstudio server root
+        # -v "$(pwd)":/home/rstudio \
+        # pass host github config to docker container
+        # -v $HOME/.gitconfig:/etc/gitconfig \
+        # pass host ssh keys to docker container for github and bitbucket
+        # -v $HOME/.ssh:/home/rstudio/.ssh \
+
+# if number of positional parameters is 0, run the
+# container in host network
+if [[ $# -eq 0 ]] ; then
+    docker run \
+        -d \
+        --rm \
+        -e DISABLE_AUTH="true" \
+        -v "$(pwd)":/home/rstudio/ \
+        -v $HOME/.gitconfig:/etc/gitconfig \
+        -v $HOME/.ssh:/home/rstudio/.ssh \
+        -v /mnt/e/census_data:/home/rstudio/.data \
+        --network host \
+        --name rstudio \
+        lglforfun/rstudio_dev
+# if a port is given, publish the container to the
+# port and give a unique container name by port
+else
+    docker run \
+        -d \
+        --rm \
+        -e DISABLE_AUTH="true" \
+        -v "$(pwd)":/home/rstudio/ \
+        -v $HOME/.gitconfig:/etc/gitconfig \
+        -v $HOME/.ssh:/home/rstudio/.ssh \
+        -v /mnt/e/census_data:/home/rstudio/.data \
+        -p "$1":8787 \
+        --name rstudio-"$1" \
+        lglforfun/rstudio_dev
+fi
