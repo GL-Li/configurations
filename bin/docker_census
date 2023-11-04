@@ -20,7 +20,7 @@ if [[ $# -eq 0 ]] ; then
         -v "$(pwd)":/home/rstudio/ \
         -v $HOME/.gitconfig:/etc/gitconfig \
         -v $HOME/.ssh:/home/rstudio/.ssh \
-        -v /mnt/e/census_data:/home/rstudio/.data \
+        -v /mnt/e/census_data:/mnt/data \
         --network host \
         --name census \
         lglforfun/rstudio_dev
@@ -34,7 +34,7 @@ else
         -v "$(pwd)":/home/rstudio/ \
         -v $HOME/.gitconfig:/etc/gitconfig \
         -v $HOME/.ssh:/home/rstudio/.ssh \
-        -v /mnt/e/census_data:/home/rstudio/.data \
+        -v /mnt/e/census_data:/mnt/data \
         -p "$1":8787 \
         --name census-"$1" \
         lglforfun/rstudio_dev
