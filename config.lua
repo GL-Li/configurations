@@ -61,6 +61,7 @@ lvim.colorscheme = "OceanicNext"
 
 -- general key mappings
 lvim.builtin.terminal.open_mapping = "<c-t>" -- from https://www.lunarvim.org/docs/configuration/keybindings
+lvim.keys.normal_mode["<F8>"] = ":nohl<CR>"
 
 -- language specific settings =================================================
 
