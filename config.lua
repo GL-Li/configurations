@@ -73,3 +73,6 @@ require 'lspconfig'.r_language_server.setup {} -- need to install.packages("lang
 
 -- Rust: key mapping
 lvim.keys.normal_mode["<C-x>"] = ":RustRun<CR>"
+
+-- turn off search highligh
+lvim.keys.normal_mode["<F8>"] = ":nohls<CR>"
